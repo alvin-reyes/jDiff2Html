@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Colorized Diff</title>
+    <style>
+        .diffdiv {
+        border: solid 1px black;
+        }
+        .comment {
+        color: gray;
+        }
+        .diff {
+        }
+        .minus3 {
+        background: #FDD;
+        }
+        .plus3 {
+        background: #DFD;
+        }
+        .at2 {
+        background: ghostWhite;
+        color: blue;
+        }
+        .Context {
+        }
+        .Plus {
+        background: #DFD;
+        }
+        .Minus {
+        background: #FDD;
+        }
+        .only {
+        }
+        .file {
+        font-size: larger;
+        font-weight: bold;
+        }
+        .separator {
+        font-size: larger;
+        color: #DCDCDC;
+        }
+        .filecontainer {
+        background: #f7f7f7;
+        border: 1px solid black;
+        padding: 10px;
+        }
+        .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Consolas, 'Liberation Mono', Courier, monospace;
+        }
+        .line {
+        display: inline-block;
+        width: 100%;
+        }
+        .exportInfo {
+        border: 1px solid black;
+        background: #fafaff;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <div class="container">
+        <div class="exportInfo">
+        </div>
+#foreach ($file in $files)
+#parse("fileDiff.vm")
+#end
+    </div>
+</pre>
+</body>
+</html>

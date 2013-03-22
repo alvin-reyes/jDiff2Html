@@ -1,0 +1,10 @@
+<div class="filecontainer">
+<div class="line file">$file.Index</div>
+<div class="line separator">$file.Separator</div>
+<div class="line minus3">$file.FromRevision</div>
+<div class="line plus3">$file.ToRevision</div>
+<div class="line at2">$file.LineNumbers</div>
+#foreach ($line in $file.Lines)
+<div class="line $line.Type">$line.Text</div>
+#end
+</div>
