@@ -1,6 +1,6 @@
-package jDiff2html;
+package jDiff2Html;
 
-import model.FileDiff;
+import jDiff2Html.model.FileDiff;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;

@@ -1,6 +1,6 @@
-package jDiff2html;
+package jDiff2Html;
 
-import model.FileDiff;
+import jDiff2Html.model.FileDiff;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package model;
+package jDiff2Html.model;
 
 import java.util.List;
 

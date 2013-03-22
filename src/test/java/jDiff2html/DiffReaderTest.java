@@ -1,7 +1,7 @@
-package jDiff2html;
+package jDiff2Html;
 
-import model.FileDiff;
-import model.LineDiff;
+import jDiff2Html.model.FileDiff;
+import jDiff2Html.model.LineDiff;
 import org.junit.Ignore;
 import org.junit.Test;
 

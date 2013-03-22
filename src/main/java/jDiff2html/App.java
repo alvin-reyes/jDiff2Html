@@ -1,4 +1,4 @@
-package jDiff2html;
+package jDiff2Html;
 
 /**
  * Hello world!
