@@ -3,6 +3,8 @@ package jDiff2Html.model;
 import java.util.List;
 
 public class FileDiff {
+
+
     private String index;
     private String separator;
     private String fromRevision;

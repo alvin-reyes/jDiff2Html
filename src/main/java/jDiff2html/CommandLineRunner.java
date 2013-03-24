@@ -1,10 +1,6 @@
 package jDiff2Html;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class CommandLineRunner
 {
     public static void main( String[] args )
     {

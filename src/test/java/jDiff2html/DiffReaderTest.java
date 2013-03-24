@@ -2,7 +2,6 @@ package jDiff2Html;
 
 import jDiff2Html.model.FileDiff;
 import jDiff2Html.model.LineDiff;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.List;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-@Ignore("WIP")
 public class DiffReaderTest {
     @Test
     public void shouldReadASingleFileDiffAndCorrectlyParseHeaderFields() throws Exception {
