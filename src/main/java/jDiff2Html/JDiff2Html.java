@@ -20,7 +20,7 @@ public class JDiff2Html {
 
         try {
             final List<FileDiff> fileDiffs = diffReader.read(IOUtils.toString(in, "UTF-8"));
-            final String renderedHtml = diffRenderer.render(fileDiffs);
+            final String renderedHtml = diffRenderer.render("", fileDiffs);
             streamWriter.write(renderedHtml);
         } finally {
             streamWriter.close();

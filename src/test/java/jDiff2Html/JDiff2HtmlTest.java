@@ -12,6 +12,8 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
+import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 
@@ -32,7 +34,7 @@ public class JDiff2HtmlTest {
         List<FileDiff> fileDiffs = new ArrayList<FileDiff>();
 
         when(reader.read(input)).thenReturn(fileDiffs);
-        when(renderer.render(fileDiffs)).thenReturn(expectedOutput);
+        when(renderer.render(any(String.class), eq(fileDiffs))).thenReturn(expectedOutput);
 
         final JDiff2Html jDiff2Html = new JDiff2Html(reader, renderer);
 
