@@ -1,7 +1,5 @@
-package model;
+package jDiff2Html.model;
 
-import jDiff2Html.model.LineDiff;
-import jDiff2Html.model.LineType;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
