@@ -57,15 +57,14 @@
         .headerInfo {
             border: 1px solid black;
             background: #fafaff;
+            padding-left:10px;
         }
     </style>
 </head>
 <body>
 <pre>
     <div class="container">
-        <div class="headerInfo">
-            $headerInfo
-        </div>
+        <div class="headerInfo">$headerInfo</div>
 $fileDiffs
     </div>
 </pre>
