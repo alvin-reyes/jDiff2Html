@@ -38,9 +38,8 @@ public class DiffReaderTest {
         assertThat(fileDiff.getSeparator(), equalTo(separator));
         assertThat(fileDiff.getFromRevision(), equalTo(fromRevision));
         assertThat(fileDiff.getToRevision(), equalTo(toRevision));
-        assertThat(fileDiff.getLineNumbers(), equalTo(lineNumbers));
 
-        assertThat(fileDiff.getLines().size(), equalTo(3));
+        assertThat(fileDiff.getLines().size(), equalTo(4));
     }
 
     @Test
@@ -68,10 +67,11 @@ public class DiffReaderTest {
         final FileDiff fileDiff = fileDiffs.get(0);
 
         final List<LineDiff> lines = fileDiff.getLines();
-        assertThat(lines.size(), equalTo(3));
-        assertThat(lines.get(0).getText(), equalTo(line1));
-        assertThat(lines.get(1).getText(), equalTo(line2));
-        assertThat(lines.get(2).getText(), equalTo(line3));
+        assertThat(lines.size(), equalTo(4));
+        assertThat(lines.get(0).getText(), equalTo(lineNumbers));
+        assertThat(lines.get(1).getText(), equalTo(line1));
+        assertThat(lines.get(2).getText(), equalTo(line2));
+        assertThat(lines.get(3).getText(), equalTo(line3));
     }
 
     @Test

@@ -29,10 +29,9 @@ public class DiffReader {
         final String separator = fileDiffRawTextBlock.get(1);
         final String fromRevision = fileDiffRawTextBlock.get(2);
         final String toRevision = fileDiffRawTextBlock.get(3);
-        final String lineNumbers = fileDiffRawTextBlock.get(4);
-        final List<LineDiff> lines = createLineDiffs(fileDiffRawTextBlock.subList(5, fileDiffRawTextBlock.size()));
+        final List<LineDiff> lines = createLineDiffs(fileDiffRawTextBlock.subList(4, fileDiffRawTextBlock.size()));
 
-        return new FileDiff(index, separator, fromRevision, toRevision, lineNumbers, lines);
+        return new FileDiff(index, separator, fromRevision, toRevision, lines);
     }
 
     private List<LineDiff> createLineDiffs(List<String> lines) {

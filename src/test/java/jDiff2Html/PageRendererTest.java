@@ -30,7 +30,7 @@ public class PageRendererTest {
         String expectedOutput = "someHtmlGunk";
         final PageRenderer pageRenderer = new PageRenderer(mockFileDiffRenderer, mockVelocityRenderer);
 
-        FileDiff fileDiff = new FileDiff("a", "b", "c", "123", "@11 22@", new ArrayList<LineDiff>());
+        FileDiff fileDiff = new FileDiff("a", "b", "c", "123", new ArrayList<LineDiff>());
         List<FileDiff> fileDiffs = new ArrayList<FileDiff>();
         fileDiffs.add(fileDiff);
 

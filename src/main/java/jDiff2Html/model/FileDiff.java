@@ -3,21 +3,17 @@ package jDiff2Html.model;
 import java.util.List;
 
 public class FileDiff {
-
-
     private String index;
     private String separator;
     private String fromRevision;
     private String toRevision;
-    private String lineNumbers;
     private List<LineDiff> lines;
 
-    public FileDiff(String index, String separator, String fromRevision, String toRevision, String lineNumbers, List<LineDiff> lines) {
+    public FileDiff(String index, String separator, String fromRevision, String toRevision, List<LineDiff> lines) {
         this.index = index;
         this.separator = separator;
         this.fromRevision = fromRevision;
         this.toRevision = toRevision;
-        this.lineNumbers = lineNumbers;
         this.lines = lines;
     }
 
@@ -39,11 +35,6 @@ public class FileDiff {
     @ReadByTemplate
     public String getToRevision() {
         return toRevision;
-    }
-
-    @ReadByTemplate
-    public String getLineNumbers() {
-        return lineNumbers;
     }
 
     @ReadByTemplate

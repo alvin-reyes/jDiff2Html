@@ -16,7 +16,7 @@
         .plus3 {
             background: #DFD;
         }
-        .at2 {
+        .LineNumbers {
             background: ghostWhite;
             color: blue;
         }

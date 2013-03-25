@@ -19,9 +19,8 @@ public class FileDiffRendererTest {
         final String separator = "===================================================================";
         final String fromRevision = "--- path/to/file\t(revision 1721)";
         final String toRevision = "+++ path/to/file\t(revision 1722)";
-        final String lineNumbers = "@@ -6455,6 +6455,26 @@";
 
-        final FileDiff fileDiff = new FileDiff(index, separator, fromRevision, toRevision, lineNumbers, new ArrayList<LineDiff>());
+        final FileDiff fileDiff = new FileDiff(index, separator, fromRevision, toRevision, new ArrayList<LineDiff>());
 
         String expectedOutput =
                 "<div class=\"filecontainer\">\r\n" +
@@ -29,7 +28,6 @@ public class FileDiffRendererTest {
                         "<div class=\"line separator\">" + separator + "</div>\r\n" +
                         "<div class=\"line minus3\">" + fromRevision + "</div>\r\n" +
                         "<div class=\"line plus3\">" + toRevision + "</div>\r\n" +
-                        "<div class=\"line at2\">" + lineNumbers + "</div>\r\n" +
                 "</div>";
 
         FileDiffRenderer renderer = new FileDiffRenderer();
@@ -45,19 +43,20 @@ public class FileDiffRendererTest {
         final String separator = "";
         final String fromRevision = "";
         final String toRevision = "";
-        final String lineNumbers = "";
+        final String lineNumbers = "@@ -56,6 +57,7 @@";
         final String line1 = "somecontextline";
         final String line2 = "+            somePlusLine";
         final String line3 = "-           someMinusLine";
         final String line4 = "otherContextLine";
         final List<LineDiff> lines = Arrays.asList(
+                new LineDiff(lineNumbers),
                 new LineDiff(line1),
                 new LineDiff(line2),
                 new LineDiff(line3),
                 new LineDiff(line4)
         );
 
-        final FileDiff fileDiff = new FileDiff(index, separator, fromRevision, toRevision, lineNumbers, lines);
+        final FileDiff fileDiff = new FileDiff(index, separator, fromRevision, toRevision, lines);
 
         String expectedOutput =
                 "<div class=\"filecontainer\">\r\n" +
@@ -65,7 +64,7 @@ public class FileDiffRendererTest {
                         "<div class=\"line separator\">" + separator + "</div>\r\n" +
                         "<div class=\"line minus3\">" + fromRevision + "</div>\r\n" +
                         "<div class=\"line plus3\">" + toRevision + "</div>\r\n" +
-                        "<div class=\"line at2\">" + lineNumbers + "</div>\r\n" +
+                        "<div class=\"line LineNumbers\">" + lineNumbers + "</div>\r\n" +
                         "<div class=\"line Context\">" + line1 + "</div>\r\n" +
                         "<div class=\"line Plus\">" + line2 + "</div>\r\n" +
                         "<div class=\"line Minus\">" + line3 + "</div>\r\n" +

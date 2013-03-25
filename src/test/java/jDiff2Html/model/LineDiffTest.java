@@ -25,6 +25,11 @@ public class LineDiffTest {
     }
 
     @Test
+    public void shouldReturnTypeAsLineNumbers() throws Exception {
+        final LineDiff lineDiff = new LineDiff("@@ -23,5 +24,6 @@");
+        assertThat(lineDiff.getType(), equalTo(LineType.LineNumbers));
+    }
+    @Test
     public void shouldDealWithEmptyString() throws Exception {
         final LineDiff lineDiff = new LineDiff("");
         assertThat(lineDiff.getType(), equalTo(LineType.Context));

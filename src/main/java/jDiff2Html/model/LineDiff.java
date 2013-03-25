@@ -17,6 +17,8 @@ public class LineDiff {
 
         final char firstCharacter = text.charAt(0);
         switch (firstCharacter) {
+            case '@':
+                return LineType.LineNumbers;
             case '+':
                 return LineType.Plus;
             case  '-':
