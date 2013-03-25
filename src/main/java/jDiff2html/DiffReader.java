@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DiffReader {
-
     public static final String INDEX_LINE_PREFIX = "Index: ";
 
     public List<FileDiff> read(String diffText) {

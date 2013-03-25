@@ -42,6 +42,7 @@
         background: #f7f7f7;
         border: 1px solid black;
         padding: 10px;
+        margin-bottom: 10px;
         }
         .container {
         width: 95%;
@@ -63,10 +64,9 @@
 <pre>
     <div class="container">
         <div class="exportInfo">
+            ## TODO
         </div>
-#foreach ($file in $files)
-#parse("fileDiff.vm")
-#end
+$fileDiffs
     </div>
 </pre>
 </body>
